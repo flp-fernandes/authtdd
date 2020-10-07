@@ -1,10 +1,9 @@
 module.exports = {
-  host: '127.0.0.1',
-  username: '',
-  password: '',
-  database: 'nodeauth',
+  host: process.env.DB_HOST,
+  username: process.env.DB_USERNAME,
+  password: process.env.DB_PASSWORD,
+  database: process.env.DB_DATABASE,
   dialect: 'postgres',
-  operatorsAliases: false,
   logging: false,
   define: {
     timestamps: true,
@@ -12,3 +11,10 @@ module.exports = {
     underscoredAll: true
   }
 }
+
+
+
+// host: '127.0.0.1',
+// username: 'postgres',
+// password: 'postgres',
+// database: 'nodeauth',
